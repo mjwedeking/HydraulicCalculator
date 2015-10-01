@@ -33,7 +33,7 @@ public class Calculator extends Fragment {
     OnPipeUpdatedListener mCallback;
 
     public interface OnPipeUpdatedListener {
-        public void onPipeUpdated(double dD, double qCAP, double Cap, double VelHead, double WetArea, double WetPerimiter);
+        void onPipeUpdated(double dD, double qCAP, double Cap, double VelHead, double WetArea, double WetPerimiter);
         //void UpdatePipe(Pipe newPipe);
     }
     private static final String FLOW = "FLOW";
@@ -128,6 +128,14 @@ public class Calculator extends Fragment {
         inputWP = (EditText) details.findViewById(R.id.inputWetPerimiterEditText);
         inputWA = (EditText) details.findViewById(R.id.inputFlowAreaEditText);
 
+
+        inputdD = (EditText) calculator.findViewById(R.id.inputdDEditText);
+        inputQCap = (EditText) calculator.findViewById(R.id.inputQCapEditText);
+        inputCap = (EditText) calculator.findViewById(R.id.inputCapacityEditText);
+        inputVelHead = (EditText) calculator.findViewById(R.id.inputVelHeadEditText);
+        inputWP = (EditText) calculator.findViewById(R.id.inputWetPerimiterEditText);
+        inputWA = (EditText) calculator.findViewById(R.id.inputFlowAreaEditText);
+
         rdoFlow = (RadioButton) calculator.findViewById(R.id.radio_flow);
         rdoQVA  = (RadioButton) calculator.findViewById(R.id.radio_qva);
         rdoVQA  = (RadioButton) calculator.findViewById(R.id.radio_vqa);
@@ -199,14 +207,20 @@ public class Calculator extends Fragment {
             public void afterTextChanged(Editable s) {
                 String NValue;
                 NValue = inputNValue.getText().toString();
-                if (NValue == "0.011")
-                    spnNValueList.setSelection(1, true);
-                else if (NValue == "0.013")
-                    spnNValueList.setSelection(2, true);
-                else if (NValue == "0.014")
-                    spnNValueList.setSelection(3, true);
-                else
-                    spnNValueList.setSelection(0, true);
+                switch(NValue) {
+                    case "0.011":
+                        spnNValueList.setSelection(1, true);
+                        break;
+                    case "0.013":
+                        spnNValueList.setSelection(2, true);
+                        break;
+                    case "0.014":
+                        spnNValueList.setSelection(3, true);
+                        break;
+                    default:
+                        spnNValueList.setSelection(0, true);
+                        break;
+                }
 
                 if(rdoFlow.isChecked() || rdoDepth.isChecked())
                     Calculate();
@@ -555,7 +569,7 @@ public class Calculator extends Fragment {
     }
     private String strPre(double inValue)
     {
-        String shortString = "";
+        String shortString;
         DecimalFormat fourDec = new DecimalFormat("0.0000", new DecimalFormatSymbols(Locale.US));
         shortString = (fourDec.format(inValue));
         return shortString;
