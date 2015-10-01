@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+<TableLayout android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TableRow>
+        <TextView android:id="@+id/inputdDLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inputdDLabel"/>
+    </TableRow>
+    <TableRow>
+        <EditText android:id="@+id/inputdDEditText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:digits="1234567890."
+            android:hint="@string/hint0"
+            android:state_enabled="false"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:id="@+id/inputQCapLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inputQCapLabel"/>
+    </TableRow>
+    <TableRow>
+        <EditText android:id="@+id/inputQCapEditText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:digits="1234567890."
+            android:hint="@string/hint0"
+            android:state_enabled="false"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:id="@+id/inputCapacityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inputCapacityLabel"/>
+    </TableRow>
+    <TableRow>
+        <EditText android:id="@+id/inputCapacityEditText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:digits="1234567890."
+            android:hint="@string/hint0"
+            android:state_enabled="false"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:id="@+id/inputWetPerimiterLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inputWetPerimiterLabel"/>
+    </TableRow>
+    <TableRow>
+        <EditText android:id="@+id/inputWetPerimiterEditText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:digits="1234567890."
+            android:hint="@string/hint0"
+            android:state_enabled="false" />
+
+    </TableRow>
+    <TableRow>
+        <TextView android:id="@+id/inputFlowAreaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inputFlowAreaLabel"/>
+    </TableRow>
+    <TableRow>
+        <EditText android:id="@+id/inputFlowAreaEditText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:digits="1234567890."
+            android:hint="@string/hint0"
+            android:state_enabled="false" />
+    </TableRow>
+    <TableRow>
+        <TextView android:id="@+id/inputVelHeadLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inputVelHeadLabel"/>
+    </TableRow>
+    <TableRow>
+        <EditText android:id="@+id/inputVelHeadEditText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:digits="1234567890."
+            android:hint="@string/hint0"
+            android:state_enabled="false" />
+    </TableRow>
+    <TableRow>
+        <TextView android:id="@+id/inputCapLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inputCapLabel"/>
+    </TableRow>
+    <TableRow>
+        <EditText android:id="@+id/inputCapEditText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:digits="1234567890."
+            android:hint="@string/hint0"
+            android:state_enabled="false" />
+    </TableRow>
+</TableLayout>
+</ScrollView>

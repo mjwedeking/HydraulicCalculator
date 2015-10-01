@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TableLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calculateLabel"/>
+        </TableRow>
+        <TableRow>
+            <RadioGroup android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/radio_flow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rdoFlowLabel"
+                    android:checked="true"
+                    android:onClick="rdoFlow_Clicked" />
+                <RadioButton android:id="@+id/radio_qva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rdoQVALabel"
+                    android:onClick="rdoQVA_Clicked" />
+                <RadioButton android:id="@+id/radio_vqa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rdoVQALabel"
+                    android:onClick="rdoVQA_Clicked" />
+                <RadioButton android:id="@+id/radio_depth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rdoDepthLabel"
+                    android:onClick="rdoDepth_Clicked" />
+            </RadioGroup>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/inputFlowLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inputFlowLabel"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/inputFlowEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:hint="@string/hint0"
+                android:state_enabled="false"/>
+            <Spinner android:id="@+id/inputFlowUnitSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/inputFlowUnits"
+                android:prompt="@string/selectUnit_prompt"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/inputDepthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inputDepthLabel"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/inputDepthEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:hint="@string/hint0"/>
+            <Spinner android:id="@+id/inputDepthUnitSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/inputDepthUnits"
+                android:prompt="@string/selectUnit_prompt"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/inputVelocityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inputVelocityLabel"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/inputVelocityEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:hint="@string/hint0"
+                android:state_enabled="false"/>
+            <Spinner android:id="@+id/inputVelocityUnitSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/inputVelocityUnits"
+                android:prompt="@string/selectUnit_prompt"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/inputDiameterLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inputDiameterLabel"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/inputDiameterEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:hint="@string/hint0"/>
+            <Spinner android:id="@+id/inputDiameterUnitSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/inputDiameterUnits"
+                android:prompt="@string/selectUnit_prompt"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/inputSlopeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inputSlopeLabel"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/inputSlopeEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:hint="@string/hint0"/>
+            <Spinner android:id="@+id/inputSlopeUnitSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/inputSlopeUnits"
+                android:prompt="@string/selectUnit_prompt"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/inputNValueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inputNValueLabel"/>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/inputNValueEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:hint="@string/hintNValue"/>
+            <Spinner android:id="@+id/inputNValueListSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/inputNValueList"
+                android:prompt="@string/selectNValue_prompt"/>
+        </TableRow>
+    </TableLayout>
+</ScrollView>

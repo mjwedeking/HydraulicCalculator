@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, hydrauliccalculator!</string>
+    <string name="app_name">Hydraulic Calculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="calculateLabel">Calculate</string>
+    <string name="inputFlowLabel">Flow</string>
+    <string name="rdoFlowLabel">Flow</string>
+    <string name="rdoQVALabel">Q=VA</string>
+    <string name="rdoVQALabel">V=Q/A</string>
+    <string name="rdoDepthLabel">Depth</string>
+    <string name="inputDepthLabel">Depth</string>
+    <string name="inputVelocityLabel">Velocity</string>
+    <string name="inputDiameterLabel">Diameter</string>
+    <string name="inputSlopeLabel">Slope</string>
+    <string name="inputNValueLabel">N Value</string>
+    <string name="selectUnit_prompt">Select Units</string>
+    <string name="selectNValue_prompt">Select Pipe Material</string>
+    <string name="hint0">0.0</string>
+    <string name="hintNValue">0.013</string>
+    <string-array name="inputFlowUnits">
+        <item>mgd</item>
+        <item>gpm</item>
+        <item>gpd</item>
+        <item>cfs</item>
+        <item>cms</item>
+        <item>lps</item>
+    </string-array>
+    <string-array name="inputDepthUnits">
+        <item>inch</item>
+        <item>ft</item>
+        <item>m</item>
+        <item>cm</item>
+        <item>mm</item>
+    </string-array>
+    <string-array name="inputDiameterUnits">
+        <item>inch</item>
+        <item>ft</item>
+        <item>m</item>
+        <item>cm</item>
+        <item>mm</item>
+    </string-array>
+    <string-array name="inputVelocityUnits">
+        <item>mph</item>
+        <item>fps</item>
+        <item>mps</item>
+        <item>kph</item>
+    </string-array>
+    <string-array name="inputSlopeUnits">
+        <item>ft/ft</item>
+        <item>%</item>
+        <item>m/m</item>
+    </string-array>
+    <string-array name="inputNValueList">
+        <item></item>
+        <item>Plastic</item>
+        <item>Concrete</item>
+        <item>Vitrified Clay</item>
+    </string-array>
+    <string name="inputdDLabel">d/D</string>
+    <string name="inputQCapLabel">Q/CAP</string>
+    <string name="inputCapacityLabel">Capacity</string>
+    <string name="inputWetPerimiterLabel">Wetted Perimiter</string>
+    <string name="inputFlowAreaLabel">Flow Area</string>
+    <string name="inputVelHeadLabel">Velocity Head</string>
+    <string name="inputCapLabel">Capacity</string>
+</resources>
