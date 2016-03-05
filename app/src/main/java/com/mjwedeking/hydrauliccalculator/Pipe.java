@@ -90,7 +90,7 @@ public class Pipe {
     public double getqCAP(){
         return _flow/_cap;
     }
-    public double getWetPerimiter(){
+    public double getWetPerimeter(){
         return _wp;
     }
     public double getWetArea(){
@@ -104,14 +104,14 @@ public class Pipe {
     }
 
     /// Calculate the Flow and Velocity given the Depth
-    /// Calculates wetted perimiter dblWPerim
+    /// Calculates wetted perimeter dblWPerim
     /// calculates wetted area dblArea
     /// Uses V = 1.486/n * (A/P)^(2/3)* S^(1/2)
     /// and  Q = V * A
     public boolean QManning()
     {
         double dblTheta = 0.0;
-        ///Wetted Perimiter
+        ///Wetted Perimeter
         double dblWPerim = 0.0;
         ///Wetted Cross Sectional Area
         double dblWArea = 0.0;
@@ -186,8 +186,8 @@ public class Pipe {
 
     /// Calculate the Depth and Velocity given the Flow
     /// Increments the depth by 0.0000001 ft until
-    /// the given flow is calculated and retuns the
-    /// resultant depth. Also calulates Velocity.
+    /// the given flow is calculated and returns the
+    /// resultant depth. Also calculates Velocity.
     public boolean DManning()
     {
         //double dblWPerim = 0.0;                            //wetted perimiter
@@ -228,14 +228,14 @@ public class Pipe {
     }
 
     /// Calculate the Capacity of the pipe
-    /// Calculates wetted perimiter dblWPerim
+    /// Calculates wetted perimeter dblWPerim
     /// calculates wetted area dblArea
     /// Uses V = 1.486/n * (A/P)^(2/3)* S^(1/2)
     /// and  Q = V * A
     public boolean Capacity()
     {
         double dblTheta = 0.0;
-        ///Wetted Perimiter
+        ///Wetted Perimeter
         double dblWPerim = 0.0;
         ///Wetted Cross Sectional Area
         double dblWArea = 0.0;

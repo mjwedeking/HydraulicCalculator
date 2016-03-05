@@ -54,13 +54,13 @@ android:layout_height="fill_parent">
             android:state_enabled="false"/>
     </TableRow>
     <TableRow>
-        <TextView android:id="@+id/inputWetPerimiterLabel"
+        <TextView android:id="@+id/inputWetPerimeterLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/inputWetPerimiterLabel"/>
+            android:text="@string/inputWetPerimeterLabel"/>
     </TableRow>
     <TableRow>
-        <EditText android:id="@+id/inputWetPerimiterEditText"
+        <EditText android:id="@+id/inputWetPerimeterEditText"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_weight="1"

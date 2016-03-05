@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, hydrauliccalculator!</string>
+    <string name="hello">Hello World, hydraulicCalculator!</string>
     <string name="app_name">Hydraulic Calculator</string>
     <string name="action_settings">Settings</string>
     <string name="calculateLabel">Calculate</string>
@@ -60,7 +60,7 @@
     <string name="inputdDLabel">d/D</string>
     <string name="inputQCapLabel">Q/CAP</string>
     <string name="inputCapacityLabel">Capacity</string>
-    <string name="inputWetPerimiterLabel">Wetted Perimiter</string>
+    <string name="inputWetPerimeterLabel">Wetted Perimeter</string>
     <string name="inputFlowAreaLabel">Flow Area</string>
     <string name="inputVelHeadLabel">Velocity Head</string>
     <string name="inputCapLabel">Capacity</string>

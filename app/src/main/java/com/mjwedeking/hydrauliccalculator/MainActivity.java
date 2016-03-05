@@ -56,7 +56,7 @@ public class MainActivity extends FragmentActivity
         actionBar.addTab(actionBar.newTab().setText("Details").setTabListener(tabListener));
     }
 
-    public void onPipeUpdated(double dD, double qCAP, double Cap, double VelHead, double WetArea, double WetPerimiter) {
+    public void onPipeUpdated(double dD, double qCAP, double Cap, double VelHead, double WetArea, double WetPerimeter) {
         // The user selected the headline of an article from the HeadlinesFragment
         Log.i("Main", "onPipeUpdated");
         // Capture the article fragment from the activity layout
@@ -67,7 +67,7 @@ public class MainActivity extends FragmentActivity
             // If article frag is available, we're in two-pane layout...
 
             // Call a method in the ArticleFragment to update its content
-            detailsFrag.updatePipe(dD, qCAP, Cap, VelHead, WetArea, WetPerimiter);
+            detailsFrag.updatePipe(dD, qCAP, Cap, VelHead, WetArea, WetPerimeter);
 
         } else {
             // If the frag is not available, we're in the one-pane layout and must swap frags...

@@ -17,7 +17,7 @@ package com.mjwedeking.hydrauliccalculator;
   import java.util.Locale;
 
 public class Details extends Fragment {
-    double mdD, mqCAP, mCap, mVelHead, mWetArea, mWetPerimiter;
+    double mdD, mqCAP, mCap, mVelHead, mWetArea, mWetPerimeter;
 
     private EditText inputdD, inputQCap, inputCap, inputVelHead, inputWP, inputWA;
 
@@ -31,7 +31,7 @@ public class Details extends Fragment {
         inputQCap = (EditText) details.findViewById(R.id.inputQCapEditText);
         inputCap = (EditText) details.findViewById(R.id.inputCapacityEditText);
         inputVelHead = (EditText) details.findViewById(R.id.inputVelHeadEditText);
-        inputWP = (EditText) details.findViewById(R.id.inputWetPerimiterEditText);
+        inputWP = (EditText) details.findViewById(R.id.inputWetPerimeterEditText);
         inputWA = (EditText) details.findViewById(R.id.inputFlowAreaEditText);
 
         return details;
@@ -40,10 +40,10 @@ public class Details extends Fragment {
     public void onStart() {
         super.onStart();
 
-        updatePipe(mdD, mqCAP, mCap, mVelHead, mWetArea, mWetPerimiter);
+        updatePipe(mdD, mqCAP, mCap, mVelHead, mWetArea, mWetPerimeter);
     }
 
-    public void updatePipe(double dD, double qCAP, double Cap, double VelHead, double WetArea, double WetPerimiter) {
+    public void updatePipe(double dD, double qCAP, double Cap, double VelHead, double WetArea, double WetPerimeter) {
         //Update Details
         Log.i("Details", "Update Details");
         inputdD.setText(strPre(dD));
@@ -51,8 +51,7 @@ public class Details extends Fragment {
         inputCap.setText(strPre(Cap));
         inputVelHead.setText(strPre(VelHead));
         inputWA.setText(strPre(WetArea));
-        inputWP.setText(strPre(WetPerimiter));
-
+        inputWP.setText(strPre(WetPerimeter));
     }
 
     private String strPre(double inValue)

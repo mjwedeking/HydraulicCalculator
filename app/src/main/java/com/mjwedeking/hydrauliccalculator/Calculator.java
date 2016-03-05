@@ -29,11 +29,13 @@ import android.widget.TextView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import com.mjwedeking.hydrauliccalculator.Pipe;
 
+import static com.mjwedeking.hydrauliccalculator.R.id.inputVelHeadEditText;
+
 public class Calculator extends Fragment {
     OnPipeUpdatedListener mCallback;
 
     public interface OnPipeUpdatedListener {
-        void onPipeUpdated(double dD, double qCAP, double Cap, double VelHead, double WetArea, double WetPerimiter);
+        void onPipeUpdated(double dD, double qCAP, double Cap, double VelHead, double WetArea, double WetPerimeter);
         //void UpdatePipe(Pipe newPipe);
     }
     private static final String FLOW = "FLOW";
@@ -124,16 +126,16 @@ public class Calculator extends Fragment {
         inputdD = (EditText) details.findViewById(R.id.inputdDEditText);
         inputQCap = (EditText) details.findViewById(R.id.inputQCapEditText);
         inputCap = (EditText) details.findViewById(R.id.inputCapacityEditText);
-        inputVelHead = (EditText) details.findViewById(R.id.inputVelHeadEditText);
-        inputWP = (EditText) details.findViewById(R.id.inputWetPerimiterEditText);
+        inputVelHead = (EditText) details.findViewById(inputVelHeadEditText);
+        inputWP = (EditText) details.findViewById(R.id.inputWetPerimeterEditText);
         inputWA = (EditText) details.findViewById(R.id.inputFlowAreaEditText);
 
 
         inputdD = (EditText) calculator.findViewById(R.id.inputdDEditText);
         inputQCap = (EditText) calculator.findViewById(R.id.inputQCapEditText);
         inputCap = (EditText) calculator.findViewById(R.id.inputCapacityEditText);
-        inputVelHead = (EditText) calculator.findViewById(R.id.inputVelHeadEditText);
-        inputWP = (EditText) calculator.findViewById(R.id.inputWetPerimiterEditText);
+        inputVelHead = (EditText) calculator.findViewById(inputVelHeadEditText);
+        inputWP = (EditText) calculator.findViewById(R.id.inputWetPerimeterEditText);
         inputWA = (EditText) calculator.findViewById(R.id.inputFlowAreaEditText);
 
         rdoFlow = (RadioButton) calculator.findViewById(R.id.radio_flow);
@@ -463,7 +465,7 @@ public class Calculator extends Fragment {
                 inputCap.setText(strPre(newPipe.getCap()));
                 inputVelHead.setText(strPre(newPipe.getVelHead()));
                 inputWA.setText(strPre(newPipe.getWetArea()));
-                inputWP.setText(strPre(newPipe.getWetPerimiter()));
+                inputWP.setText(strPre(newPipe.getWetPerimeter()));
             }
             else if (rdoQVA.isChecked())
             {
@@ -492,7 +494,7 @@ public class Calculator extends Fragment {
                 inputCap.setText("NaN");
                 inputVelHead.setText(strPre(newPipe.getVelHead()));
                 inputWA.setText(strPre(newPipe.getWetArea()));
-                inputWP.setText(strPre(newPipe.getWetPerimiter()));
+                inputWP.setText(strPre(newPipe.getWetPerimeter()));
             }
             else if (rdoDepth.isChecked())       //Calculate Depth
             {
@@ -525,7 +527,7 @@ public class Calculator extends Fragment {
                 inputCap.setText(strPre(newPipe.getCap()));
                 inputVelHead.setText(strPre(newPipe.getVelHead()));
                 inputWA.setText(strPre(newPipe.getWetArea()));
-                inputWP.setText(strPre(newPipe.getWetPerimiter()));
+                inputWP.setText(strPre(newPipe.getWetPerimeter()));
             }
             else if (rdoVQA.isChecked())          //Calculate velocity
             {
@@ -554,10 +556,10 @@ public class Calculator extends Fragment {
                 inputCap.setText("NaN");
                 inputVelHead.setText(strPre(newPipe.getVelHead()));
                 inputWA.setText(strPre(newPipe.getWetArea()));
-                inputWP.setText(strPre(newPipe.getWetPerimiter()));
+                inputWP.setText(strPre(newPipe.getWetPerimeter()));
             }
 
-            mCallback.onPipeUpdated(newPipe.getdD(), newPipe.getqCAP(), newPipe.getCap(), newPipe.getVelHead(), newPipe.getWetArea(), newPipe.getWetPerimiter());
+            mCallback.onPipeUpdated(newPipe.getdD(), newPipe.getqCAP(), newPipe.getCap(), newPipe.getVelHead(), newPipe.getWetArea(), newPipe.getWetPerimeter());
             //this.Cursor = Cursors.Default;
             //statusBar.Text = "Completed!";
         }
